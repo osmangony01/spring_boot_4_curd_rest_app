@@ -20,17 +20,17 @@ public class TaskService {
         return taskRepository.save(task);
     }
 
-    // Get All
+    // Get All task
     public List<Task> getAllTasks() {
         return taskRepository.findAll();
     }
 
-    // Get By ID
+    // Get task By ID
     public Task getTaskById(Long id) {
         return taskRepository.findById(id).orElse(null);
     }
 
-    // Update
+    // Update task
     public Task updateTask(Long id, Task updatedTask) {
         Task existingTask = getTaskById(id);
 
@@ -43,7 +43,7 @@ public class TaskService {
         return taskRepository.save(existingTask);
     }
 
-    // Delete
+    // Delete a task
     public void deleteTask(Long id) {
         Task task = getTaskById(id);
         taskRepository.delete(task);

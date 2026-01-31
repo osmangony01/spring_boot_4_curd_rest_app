@@ -1,6 +1,6 @@
 spring:
     application:
-        name : SP_CURD_APP
+        name : SP4_CURD_APP
 
     # MySQL DataSource Configuration
     datasource:
